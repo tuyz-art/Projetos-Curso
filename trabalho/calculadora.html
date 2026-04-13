@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Conversor de Temperatura</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+ 
+<body> 
+    <div class="container"> 
+        <!-- Container principal que organiza todo o conteúdo da página --> 
+        <h1>Conversor de Temperatura</h1> 
+        <!-- Título principal da página --> 
+        <p>Digite uma temperatura em Celsius:</p> 
+        <!-- Texto explicativo para orientar o usuário --> 
+        <div class="input-area"> 
+            <!-- Área que agrupa o campo de entrada e o botão --> 
+            <input type="number" id="celsius" placeholder="Ex: 25"> 
+            <!--  
+                Campo de entrada: 
+                type="number" → aceita apenas números 
+                id="celsius" → usado pelo JavaScript para pegar o valor digitado 
+                placeholder → exemplo que aparece dentro do campo 
+            --> 
+            <button onclick="converter()">Converter</button> 
+            <!--  
+                Botão que chama a função converter() 
+                quando o usuário clica 
+            --> 
+        </div> 
+        <div class="results"> 
+            <!-- Área onde os resultados das conversões aparecem --> 
+            <div class="result-box"> 
+                <!-- Caixa de resultado para Fahrenheit --> 
+                <h3>Fahrenheit</h3> 
+                <!-- Título do resultado --> 
+ 
+                <p id="fahrenheit">--</p> 
+                <!--  
+                    Local onde o valor em Fahrenheit será exibido 
+                    Começa com "--" antes de qualquer cálculo 
+                --> 
+            </div> 
+            <div class="result-box"> 
+                <!-- Caixa de resultado para Kelvin --> 
+                <h3>Kelvin</h3> 
+                <!-- Título do resultado --> 
+                <p id="kelvin">--</p> 
+                <!--  
+                    Local onde o valor em Kelvin será exibido 
+                --> 
+            </div> 
+        </div> 
+ 
+        <div class="action-buttons"> 
+            <!-- Área para botões de ação --> 
+            <button onclick="limparTudo()" class="btn-limpar"> 
+                Limpar Tudo 
+            </button> 
+            <!--  
+                Botão que chama a função limparTudo() 
+                Serve para apagar os valores e reiniciar o conversor 
+            --> 
+        </div> 
+ 
+        <div class="info"> 
+            <!-- Área informativa com as fórmulas usadas --> 
+            <p>Fórmulas usadas:</p> 
+            <!-- Texto informativo --> 
+            <p>°F = (°C × 9/5) + 32</p> 
+            <!-- Fórmula de conversão para Fahrenheit --> 
+            <p>K = °C + 273.15</p> 
+            <!-- Fórmula de conversão para Kelvin --> 
+        </div> 
+    </div> 
+    <!-- Fim do container principal --> 
+ 
+    <script src="script.js"></script> 
+    <!-- Importa o arquivo JavaScript responsável pelos cálculos --> 
+</body> 
+ 
+</html>
